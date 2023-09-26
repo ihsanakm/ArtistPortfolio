@@ -5,8 +5,7 @@ const Shared = () =>{
     return (
         <>
         <Navigation/>
-            
-            <Outlet/>
+        <Outlet/>
         </>
     )
 }

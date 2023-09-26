@@ -6,7 +6,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import logo from '../../assets/logo.jpg'
-import {Link} from "react-router-dom"
+import {Link, Outlet} from "react-router-dom"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -16,6 +16,7 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
+    <div>
     <header className="bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
@@ -35,15 +36,15 @@ export default function Navigation() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-        <Link to={"about"} className="text-l font-semibold leading-6 text-gray-900">
+        <Link to="artwork" className="text-l font-semibold leading-6 text-gray-900">
             Art Work
           </Link>
           <a href="#" className="text-l font-semibold leading-6 text-gray-900">
             Calender
           </a>
-          <a href="#" className="text-l font-semibold leading-6 text-gray-900">
+          <Link to="about" className="text-l font-semibold leading-6 text-gray-900">
             About Me
-          </a>
+          </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
         <button class="bg-white hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow ">
@@ -107,5 +108,9 @@ export default function Navigation() {
         </Dialog.Panel>
       </Dialog>
     </header>
+    <main>
+      <Outlet />
+    </main>
+    </div>
   )
 }

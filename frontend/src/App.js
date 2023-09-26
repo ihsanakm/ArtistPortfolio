@@ -8,20 +8,30 @@ import {
   BrowserRouter,
   Link,
   Route,
+  RouterProvider,
   Routes,
+  createBrowserRouter,
+  createRoutesFromElements,
 } from "react-router-dom";
 import Shared from "./pages/Shared/Shared";
 function App() {
-  
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Navigation />}>
+        <Route path="artwork" element={<Gallery />} />
+        <Route path="about" element={<About />} />
+      </Route>
+
+    
+    )
+  )
+
+
   return (
-    
-      <Routes>
-        <Route  path="/" element={<Shared/>}>
-          <Route index element={<Gallery/>}/>
-          <Route path="/about" element={<About/>}/>
-        </Route>
-      </Routes>
-    
+    <div>
+      <RouterProvider router={router} />
+    </div>
   );
 }
 
