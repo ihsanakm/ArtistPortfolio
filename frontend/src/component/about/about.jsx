@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <div>
-<div class="w-full h-screen bg-gray-100 px-10 pt-10">
+<div class="w-full h-screen bg-gray-100 p-10">
     <div class="relative mt-16 mb-32 max-w-sm mx-auto mt-24">
         <div class="rounded overflow-hidden shadow-md bg-white">
             <div class="absolute -mt-20 w-full flex justify-center">

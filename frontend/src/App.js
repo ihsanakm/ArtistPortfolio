@@ -13,7 +13,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import Shared from "./pages/Shared/Shared";
+import Contact from "./component/contact/Contact";
 function App() {
 
   const router = createBrowserRouter(
@@ -21,6 +21,8 @@ function App() {
       <Route path="/" element={<Navigation />}>
         <Route path="artwork" element={<Gallery />} />
         <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+
       </Route>
 
     
