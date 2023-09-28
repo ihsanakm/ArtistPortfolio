@@ -14,6 +14,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import Contact from "./component/contact/Contact";
+import Calender from "./component/calendar/Calendar";
 function App() {
 
   const router = createBrowserRouter(
@@ -22,6 +23,8 @@ function App() {
         <Route path="artwork" element={<Gallery />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="calender" element={<Calender />} />
+
 
       </Route>
 

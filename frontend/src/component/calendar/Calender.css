@@ -1,0 +1,18 @@
+:root {
+    --fc-border-color: rgb(163, 157, 157);
+  }
+
+
+.fc .fc-col-header-cell-cushion { /* needs to be same precedence */
+    padding-top: 5px; /* an override! */
+    padding-bottom: 5px; /* an override! */
+  }
+
+.fc-media-screen {
+    padding: 25px;
+    height: 100vh;
+}
+
+main{
+    background-color: rgb(243 244 246);
+}
